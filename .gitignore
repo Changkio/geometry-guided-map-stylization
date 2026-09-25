@@ -1,0 +1,21 @@
+# Runtime environments and downloaded pretrained weights
+.venv*/
+models/
+__pycache__/
+*.py[cod]
+*.part
+.env
+.env.*
+!.env.example
+provenance/local/
+tmp/
+# Large evidence is distributed as a release asset
+*.zip
+# Local manuscript build products
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+svproc.cls
