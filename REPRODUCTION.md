@@ -1,11 +1,34 @@
 # Reproduce the experimental records
 
-## Restore data and evidence
+The main branch is a **core-source preview**, not the complete runtime tree.
+The Release archives are the authoritative code and experiment distribution.
+Run the commands below only inside a fresh extraction of the complete experiment
+package; do not try to fill gaps in the preview checkout manually.
 
-Verify `geometry-guided-map-stylization-experiments-v1.0.0.zip` using the supplied
-checksums and extract into a new directory. Run from the extracted root containing
-`project/`, `configs/`, `provenance/`, and `revision_20260925/`. The code-only checkout
-contains flattened summaries; the full asset preserves the original experiment paths.
+## Download and restore the complete package
+
+From [Release v1.0.0](https://github.com/Changkio/geometry-guided-map-stylization/releases/tag/v1.0.0), download:
+
+- `geometry-guided-map-stylization-code-v1.0.0.zip` — complete public source package.
+- `geometry-guided-map-stylization-experiments-v1.0.0.zip` — code plus archived inputs,
+  all recorded outputs and logs, and original experiment paths; use this for reproduction.
+- `EXPERIMENTS_SHA256SUMS.txt` — full SHA256 checksums for both packages.
+
+In the download directory, compute both archive hashes and compare them with the
+checksum file. Continue only if they match. Choose a new extraction directory:
+
+```powershell
+Get-FileHash -Algorithm SHA256 .\geometry-guided-map-stylization-code-v1.0.0.zip, .\geometry-guided-map-stylization-experiments-v1.0.0.zip
+Get-Content .\EXPERIMENTS_SHA256SUMS.txt
+Expand-Archive -LiteralPath .\geometry-guided-map-stylization-experiments-v1.0.0.zip -DestinationPath .\map-stylization-experiments-v1.0.0
+Set-Location .\map-stylization-experiments-v1.0.0
+```
+
+The extracted root contains `project/`, `configs/`, `provenance/`, `tools/`,
+`tests/`, and `revision_20260925/`. All paths below refer to that root, not to the
+current main-branch preview. Keep the downloaded archives and an untouched evidence
+copy. Model weights are not included. See [LICENSING.md](LICENSING.md) for the
+software and data terms. The packages contain no manuscript or submission files.
 
 ## Environment and weights
 
@@ -24,8 +47,8 @@ py -3.10 -m venv .venv
 Use the new helper for downloads. It checks complete historical hashes and writes
 local verification under `provenance/local/`, preserving the frozen model record.
 Historical downloaders are retained as evidence and should not be used for a new run.
-Existing wrong-hash files are rejected. An interrupted download requires inspecting
-the stale `.part` file before retrying. Use archived OSM responses, not new live queries.
+Existing wrong-hash files are rejected. If a terminated process leaves a stale `.part` file,
+inspect it before retrying. Use archived OSM responses, not new live queries.
 
 ## Original suites
 
