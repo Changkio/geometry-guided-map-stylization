@@ -1,0 +1,1751 @@
+{
+  "status": "DEVELOPMENT_ONLY",
+  "common": {
+    "seed": 42,
+    "precision": "bf16",
+    "inner_iterations": 1,
+    "lr": 0.05,
+    "layers": [
+      10,
+      16
+    ],
+    "deterministic_algorithms": true,
+    "resolution": 512,
+    "steps": 200,
+    "attention_scale": 1.0
+  },
+  "model_path": "models/sd15",
+  "output_root": "project/results/development_search",
+  "warmup_steps": 4,
+  "jobs": [
+    {
+      "run_id": "dev01_vangogh_B0_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_vangogh_B1_w0p125_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_vangogh_B1_w0p5_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_vangogh_B1_w1p0_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_vangogh_A1_w0p125_b1_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev01_vangogh_A1_w0p125_b2_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev01_vangogh_A1_w0p125_b4_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev01_vangogh_A1_w0p25_b1_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev01_vangogh_A1_w0p25_b2_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev01_vangogh_A1_w0p25_b4_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev01_vangogh_B2_w50_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_vangogh_B2_w100_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_vangogh_B2_w200_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_vangogh_B2_w400_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_vangogh_B2_w800_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_vangogh_B2_w1600_200",
+      "map_id": "dev01",
+      "style_id": "vangogh",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_hokusai_B0_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_hokusai_B1_w0p125_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_hokusai_B1_w0p5_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_hokusai_B1_w1p0_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_hokusai_A1_w0p125_b1_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev01_hokusai_A1_w0p125_b2_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev01_hokusai_A1_w0p125_b4_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev01_hokusai_A1_w0p25_b1_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev01_hokusai_A1_w0p25_b2_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev01_hokusai_A1_w0p25_b4_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev01_hokusai_B2_w50_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_hokusai_B2_w100_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_hokusai_B2_w200_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_hokusai_B2_w400_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_hokusai_B2_w800_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_hokusai_B2_w1600_200",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_cezanne_B0_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_cezanne_B1_w0p125_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_cezanne_B1_w0p5_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_cezanne_B1_w1p0_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_cezanne_A1_w0p125_b1_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev01_cezanne_A1_w0p125_b2_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev01_cezanne_A1_w0p125_b4_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev01_cezanne_A1_w0p25_b1_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev01_cezanne_A1_w0p25_b2_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev01_cezanne_A1_w0p25_b4_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev01_cezanne_B2_w50_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_cezanne_B2_w100_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_cezanne_B2_w200_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_cezanne_B2_w400_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_cezanne_B2_w800_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev01_cezanne_B2_w1600_200",
+      "map_id": "dev01",
+      "style_id": "cezanne",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_vangogh_B0_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_vangogh_B1_w0p125_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_vangogh_B1_w0p5_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_vangogh_B1_w1p0_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_vangogh_A1_w0p125_b1_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev02_vangogh_A1_w0p125_b2_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev02_vangogh_A1_w0p125_b4_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev02_vangogh_A1_w0p25_b1_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev02_vangogh_A1_w0p25_b2_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev02_vangogh_A1_w0p25_b4_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev02_vangogh_B2_w50_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_vangogh_B2_w100_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_vangogh_B2_w200_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_vangogh_B2_w400_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_vangogh_B2_w800_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_vangogh_B2_w1600_200",
+      "map_id": "dev02",
+      "style_id": "vangogh",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_hokusai_B0_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_hokusai_B1_w0p125_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_hokusai_B1_w0p5_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_hokusai_B1_w1p0_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_hokusai_A1_w0p125_b1_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev02_hokusai_A1_w0p125_b2_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev02_hokusai_A1_w0p125_b4_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev02_hokusai_A1_w0p25_b1_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev02_hokusai_A1_w0p25_b2_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev02_hokusai_A1_w0p25_b4_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev02_hokusai_B2_w50_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_hokusai_B2_w100_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_hokusai_B2_w200_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_hokusai_B2_w400_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_hokusai_B2_w800_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_hokusai_B2_w1600_200",
+      "map_id": "dev02",
+      "style_id": "hokusai",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_cezanne_B0_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_cezanne_B1_w0p125_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_cezanne_B1_w0p5_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_cezanne_B1_w1p0_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_cezanne_A1_w0p125_b1_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev02_cezanne_A1_w0p125_b2_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev02_cezanne_A1_w0p125_b4_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev02_cezanne_A1_w0p25_b1_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev02_cezanne_A1_w0p25_b2_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev02_cezanne_A1_w0p25_b4_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev02_cezanne_B2_w50_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_cezanne_B2_w100_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_cezanne_B2_w200_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_cezanne_B2_w400_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_cezanne_B2_w800_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev02_cezanne_B2_w1600_200",
+      "map_id": "dev02",
+      "style_id": "cezanne",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_vangogh_B0_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_vangogh_B1_w0p125_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_vangogh_B1_w0p5_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_vangogh_B1_w1p0_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_vangogh_A1_w0p125_b1_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev03_vangogh_A1_w0p125_b2_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev03_vangogh_A1_w0p125_b4_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev03_vangogh_A1_w0p25_b1_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev03_vangogh_A1_w0p25_b2_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev03_vangogh_A1_w0p25_b4_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev03_vangogh_B2_w50_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_vangogh_B2_w100_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_vangogh_B2_w200_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_vangogh_B2_w400_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_vangogh_B2_w800_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_vangogh_B2_w1600_200",
+      "map_id": "dev03",
+      "style_id": "vangogh",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_hokusai_B0_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_hokusai_B1_w0p125_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_hokusai_B1_w0p5_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_hokusai_B1_w1p0_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_hokusai_A1_w0p125_b1_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev03_hokusai_A1_w0p125_b2_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev03_hokusai_A1_w0p125_b4_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev03_hokusai_A1_w0p25_b1_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev03_hokusai_A1_w0p25_b2_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev03_hokusai_A1_w0p25_b4_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev03_hokusai_B2_w50_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_hokusai_B2_w100_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_hokusai_B2_w200_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_hokusai_B2_w400_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_hokusai_B2_w800_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_hokusai_B2_w1600_200",
+      "map_id": "dev03",
+      "style_id": "hokusai",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_cezanne_B0_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_cezanne_B1_w0p125_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_cezanne_B1_w0p5_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_cezanne_B1_w1p0_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_cezanne_A1_w0p125_b1_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev03_cezanne_A1_w0p125_b2_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev03_cezanne_A1_w0p125_b4_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev03_cezanne_A1_w0p25_b1_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev03_cezanne_A1_w0p25_b2_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev03_cezanne_A1_w0p25_b4_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev03_cezanne_B2_w50_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_cezanne_B2_w100_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_cezanne_B2_w200_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_cezanne_B2_w400_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_cezanne_B2_w800_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev03_cezanne_B2_w1600_200",
+      "map_id": "dev03",
+      "style_id": "cezanne",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_vangogh_B0_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_vangogh_B1_w0p125_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_vangogh_B1_w0p5_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_vangogh_B1_w1p0_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_vangogh_A1_w0p125_b1_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev04_vangogh_A1_w0p125_b2_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev04_vangogh_A1_w0p125_b4_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev04_vangogh_A1_w0p25_b1_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev04_vangogh_A1_w0p25_b2_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev04_vangogh_A1_w0p25_b4_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev04_vangogh_B2_w50_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_vangogh_B2_w100_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_vangogh_B2_w200_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_vangogh_B2_w400_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_vangogh_B2_w800_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_vangogh_B2_w1600_200",
+      "map_id": "dev04",
+      "style_id": "vangogh",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_hokusai_B0_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_hokusai_B1_w0p125_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_hokusai_B1_w0p5_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_hokusai_B1_w1p0_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_hokusai_A1_w0p125_b1_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev04_hokusai_A1_w0p125_b2_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev04_hokusai_A1_w0p125_b4_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev04_hokusai_A1_w0p25_b1_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev04_hokusai_A1_w0p25_b2_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev04_hokusai_A1_w0p25_b4_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev04_hokusai_B2_w50_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_hokusai_B2_w100_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_hokusai_B2_w200_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_hokusai_B2_w400_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_hokusai_B2_w800_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_hokusai_B2_w1600_200",
+      "map_id": "dev04",
+      "style_id": "hokusai",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_cezanne_B0_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_cezanne_B1_w0p125_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "B1_w0p125",
+      "content_mode": "q",
+      "content_weight": 0.125,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_cezanne_B1_w0p5_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "B1_w0p5",
+      "content_mode": "q",
+      "content_weight": 0.5,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_cezanne_B1_w1p0_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "B1_w1p0",
+      "content_mode": "q",
+      "content_weight": 1.0,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_cezanne_A1_w0p125_b1_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 1
+    },
+    {
+      "run_id": "dev04_cezanne_A1_w0p125_b2_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 2
+    },
+    {
+      "run_id": "dev04_cezanne_A1_w0p125_b4_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "A1_w0p125_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.125,
+      "beta": 4
+    },
+    {
+      "run_id": "dev04_cezanne_A1_w0p25_b1_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1
+    },
+    {
+      "run_id": "dev04_cezanne_A1_w0p25_b2_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b2",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 2
+    },
+    {
+      "run_id": "dev04_cezanne_A1_w0p25_b4_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev04_cezanne_B2_w50_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "B2_w50",
+      "content_mode": "qk",
+      "content_weight": 50,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_cezanne_B2_w100_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "B2_w100",
+      "content_mode": "qk",
+      "content_weight": 100,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_cezanne_B2_w200_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_cezanne_B2_w400_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "B2_w400",
+      "content_mode": "qk",
+      "content_weight": 400,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_cezanne_B2_w800_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "B2_w800",
+      "content_mode": "qk",
+      "content_weight": 800,
+      "beta": 0
+    },
+    {
+      "run_id": "dev04_cezanne_B2_w1600_200",
+      "map_id": "dev04",
+      "style_id": "cezanne",
+      "method": "B2_w1600",
+      "content_mode": "qk",
+      "content_weight": 1600,
+      "beta": 0
+    }
+  ],
+  "protocol": "configs/development_protocol.json"
+}

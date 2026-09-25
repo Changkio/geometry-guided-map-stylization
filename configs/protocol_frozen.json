@@ -1,0 +1,117 @@
+{
+  "status": "FROZEN_BEFORE_ANY_TEST_OUTPUT",
+  "frozen_utc": "2026-09-25T01:07:28.466441+00:00",
+  "selection": {
+    "B1": {
+      "selected_development_method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0.0,
+      "style_mismatch_no_eligible_candidate": false,
+      "development_mean_boundary_f1_2": 0.8889912943696078,
+      "development_mean_gram": 30.05623610814412
+    },
+    "A1": {
+      "selected_development_method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4.0,
+      "style_mismatch_no_eligible_candidate": false,
+      "development_mean_boundary_f1_2": 0.9398273414695029,
+      "development_mean_gram": 24.557720810174942
+    },
+    "AT": {
+      "selected_development_method": "A1_w0p25_b4",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4.0,
+      "style_mismatch_no_eligible_candidate": false,
+      "development_mean_boundary_f1_2": 0.9398273414695029,
+      "development_mean_gram": 24.557720810174942
+    },
+    "B2": {
+      "selected_development_method": "B2_w200",
+      "content_mode": "qk",
+      "content_weight": 200.0,
+      "beta": 0.0,
+      "style_mismatch_no_eligible_candidate": false,
+      "development_mean_boundary_f1_2": 0.4839917376981497,
+      "development_mean_gram": 1.7551958958307903
+    }
+  },
+  "formal_image_count": 180,
+  "unit_of_replication": "geographic map window; average the same three fixed styles within each map",
+  "separate_precision_control": {
+    "image_count": 36,
+    "method": "Q32",
+    "config": "configs/precision_control.json",
+    "no_tuning": true,
+    "purpose": "Uniform spatial weighting through the same FP32 normalized loss path; compare Q32-B0 for precision and A1-Q32 for geometry at lambda0.25"
+  },
+  "statistics": {
+    "method": "paired map-level percentile bootstrap",
+    "replicates": 10000,
+    "confidence": 0.95,
+    "seed": 20260925,
+    "comparisons": [
+      "A1 - B0",
+      "A1 - B1",
+      "A1 - B2",
+      "AT - B0",
+      "AT - B1",
+      "AT - B2"
+    ],
+    "primary_metric": "boundary_f1_2",
+    "p_values": "not computed",
+    "generalization": "descriptive for a fixed convenience sample; styles are fixed, not independent replicates"
+  },
+  "qualitative": {
+    "main_pairs": [
+      [
+        "test01",
+        "hokusai"
+      ],
+      [
+        "test03",
+        "cezanne"
+      ],
+      [
+        "test04",
+        "vangogh"
+      ]
+    ],
+    "main_crop_xyxy": [
+      192,
+      192,
+      320,
+      320
+    ],
+    "all_outputs": "include complete contact sheets",
+    "failure_case_rule": "add the map/style with smallest A1-minus-B1 boundary F1; label as post-hoc diagnostic, not representative"
+  },
+  "failure_policy": "Preserve each failed attempt. Retry computational failures under identical settings. Never drop a low-quality successful output.",
+  "optional_relative_query_term": "not integrated or empirically evaluated; excluded from the reported method",
+  "sha256": {
+    "configs/development_protocol.json": "2181abc1c5988e75a288fe57a888575b46ec3e67037c2fb2500a89059376a975",
+    "configs/development_search.json": "8b620c8a0917bc0c0f3e5c86ad628fcab0f9f1b1e1f0980998389cf8b9f821fa",
+    "configs/formal_test.json": "afcc5ae1850d71e2349381d1c9edd810004f1e2e400106eba64ed6c6aea5078f",
+    "project/data/source_windows.json": "a3fb553afd7282395f0a80dc16641ece1db2eba529041dbf94321b48f2465d52",
+    "project/data/source_styles.json": "658146d7064eb4f55ff7f20452d09b4bf2fd2d5b56a699e0150088a26eee5ae8",
+    "project/data/map_manifest_512.json": "6b363aaea6585f35c853c048fdc6690660b23efb96efbc8aa35ceb481fa7fba2",
+    "project/data/style_manifest_512.json": "f98058893214db7ea8df01f18415cc9caadb6eb87c1e7167173c473246e7f7fe",
+    "project/data/render_config_512.json": "4c677fe4fbbff3564fad75db1c985247064f975223d4b66ed3e926fceb3b748f",
+    "project/src/evaluate.py": "0ddf97b938583df92924224a7e4189ba39b47d065ab6a5b3666ab4b4045d6455",
+    "project/src/analyze.py": "8f9d85d02eb86283c8038540f5d8b69187f8628b66b053c0f5cedaad31d54998",
+    "project/src/geometry_prior.py": "347ea605eb2391d07ff91a9343777162e43eed7f189b4b8b7b35c7c562d56cf2",
+    "project/src/geometry_losses.py": "46868611a0e70844f10a113876094eae803062f68a699c6df3abefa0a6a34858",
+    "project/src/map_pipeline.py": "feba30b1a15826d08c1cc74f3558c73217e54859be49b085a520d79e21f267bc",
+    "project/src/run_experiments.py": "0cb925bde35114f65e3c237394d7d6544876009bd7475753e72b7c3c544d7c40",
+    "project/src/common.py": "1cc9155a200277784e289a6acd361facad598d0b012ca51aba642f0a8c5f9612",
+    "provenance/model_download.json": "7a3513f97bf6d893b700df6c55cc2afae9ea6b4b5b5118e8d9a933d2f500e649",
+    "configs/precision_control.json": "1296dbe151b51b811b43f33d0ece398f768b22f467b2e9c5ae37dddd1120bfd9",
+    "project/src/precision_control.py": "811690c90d2b692f727da8508140c846a4df1b384cb0b930792e6e3f92220326",
+    "project/src/analyze_precision.py": "757f977f8f8c161be3b33c04971ebe2643d82f1764e90b7f74f0ab685e91d567",
+    "project/results/development_search/evaluation/per_image_metrics.csv": "259154a7f68c6e0086dd5800e4b8666b945b97ad3ed3dcd62cf1416893cc22d6",
+    "project/results/development_search/analysis/selection.json": "25682124532e393a52d9c9cd9efd7fc5338b58f8fee99e57b4d3b9bfb2c5e198"
+  }
+}

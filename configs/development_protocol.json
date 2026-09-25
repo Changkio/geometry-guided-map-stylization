@@ -1,0 +1,74 @@
+{
+  "status": "DEVELOPMENT_SEARCH_AMENDED_AFTER_PILOT_BEFORE_TEST_OUTPUTS",
+  "created_local_date": "2026-09-25",
+  "maps": [
+    "dev01",
+    "dev02",
+    "dev03",
+    "dev04"
+  ],
+  "styles": [
+    "vangogh",
+    "hokusai",
+    "cezanne"
+  ],
+  "resolution": 512,
+  "primary_steps": 200,
+  "reason": "Deterministic smoke runs measure approximately 0.3 seconds per step; the original notebook's 200-step budget fits the 12-hour delivery window.",
+  "common": {
+    "seed": 42,
+    "precision": "bf16",
+    "inner_iterations": 1,
+    "lr": 0.05,
+    "layers": [
+      10,
+      16
+    ],
+    "deterministic_algorithms": true
+  },
+  "candidates": {
+    "B0": {
+      "content_weight": 0.25
+    },
+    "B1": {
+      "content_weight": [
+        0.125,
+        0.25,
+        0.5,
+        1.0
+      ]
+    },
+    "A1": {
+      "content_weight": [
+        0.125,
+        0.25
+      ],
+      "beta": [
+        1,
+        2,
+        4
+      ]
+    },
+    "B2": {
+      "content_weight": [
+        50,
+        100,
+        200,
+        400,
+        800,
+        1600
+      ]
+    }
+  },
+  "shared_candidates": "B0 is a candidate for tuned global Q and the fixed beta-zero ablation reference for geometry Q. A1 must use a positive beta so the actual proposed module is evaluated even if uniform Q is better.",
+  "selection_rule": "Average each metric over styles within each development map, then equally over maps. For each method family choose highest boundary F1 at 2px among candidates whose mean Gram style distance is <=1.05 times B0. If no candidate is eligible, choose closest mean Gram distance to B0 and explicitly report the style mismatch. Break ties by smaller coefficient. Retain all candidates and show the development structure/style frontier. For A1 select among positive beta values; if B0 is better, report that negative result explicitly. For A1 select positive beta with global weight fixed at 0.25; for the separate AT configuration jointly select global weight and positive beta. Ties: smaller global weight, then smaller beta. Both fixed-weight geometry ablations and the selected setting remain visible.",
+  "optional_B": "Only consider on development after A evaluation. Do not retain based on test performance. A-only is the default scoped deliverable.",
+  "formal_target": "12 test maps x3 styles x5 configurations=180: the four required methods B0/B1/A1/B2 plus separately labeled tuned geometry AT. A1 and B0 retain the shared 0.25 content coefficient.",
+  "no_test_tuning": true,
+  "amended_utc": "2026-09-24T21:44:22.468603+00:00",
+  "amendment_reason": "The two-map development pilot showed geometry weighting improved boundaries but weakened style transfer at the same global coefficient; therefore search global coefficient for geometry as well. QK produced much stronger style transfer at coefficient 200, so extend its upper range. No test output was generated or inspected.",
+  "pilot_metrics_path": "project/results/development_pilot/evaluation/per_image_metrics.csv",
+  "pilot_metrics_sha256": "2939debd9079215fcf58df1d37ad98427d88539d879a33aa0f7fbc3728c81448",
+  "clarified_utc": "2026-09-24T21:48:45.990312+00:00",
+  "clarification": "Preserve the original fixed-coefficient ablation: A1 selects positive beta at content_weight=0.25. Report the jointly tuned geometry configuration separately as AT, never as an isolated weighting ablation. The existing 192-job development search does not change."
+}

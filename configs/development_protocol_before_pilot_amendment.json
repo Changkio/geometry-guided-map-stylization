@@ -1,0 +1,63 @@
+{
+  "status": "PREDECLARED_DEVELOPMENT_SELECTION_BEFORE_TEST_OUTPUTS",
+  "created_local_date": "2026-09-25",
+  "maps": [
+    "dev01",
+    "dev02",
+    "dev03",
+    "dev04"
+  ],
+  "styles": [
+    "vangogh",
+    "hokusai",
+    "cezanne"
+  ],
+  "resolution": 512,
+  "primary_steps": 200,
+  "reason": "Deterministic smoke runs measure approximately 0.3 seconds per step; the original notebook's 200-step budget fits the 12-hour delivery window.",
+  "common": {
+    "seed": 42,
+    "precision": "bf16",
+    "inner_iterations": 1,
+    "lr": 0.05,
+    "layers": [
+      10,
+      16
+    ],
+    "deterministic_algorithms": true
+  },
+  "candidates": {
+    "B0": {
+      "content_weight": 0.25
+    },
+    "B1": {
+      "content_weight": [
+        0.125,
+        0.25,
+        0.5,
+        1.0
+      ]
+    },
+    "A1": {
+      "content_weight": 0.25,
+      "beta": [
+        1,
+        2,
+        4
+      ]
+    },
+    "B2": {
+      "content_weight": [
+        50,
+        100,
+        200,
+        400
+      ]
+    }
+  },
+  "shared_candidates": "B0 is a candidate for tuned global Q and the fixed beta-zero ablation reference for geometry Q. A1 must use a positive beta so the actual proposed module is evaluated even if uniform Q is better.",
+  "selection_rule": "Average each metric over styles within each development map, then equally over maps. For each method family choose highest boundary F1 at 2px among candidates whose mean Gram style distance is <=1.05 times B0. If no candidate is eligible, choose closest mean Gram distance to B0 and explicitly report the style mismatch. Break ties by smaller coefficient. Retain all candidates and show the development structure/style frontier. For A1 select among positive beta values; if B0 is better, report that negative result explicitly.",
+  "optional_B": "Only consider on development after A evaluation. Do not retain based on test performance. A-only is the default scoped deliverable.",
+  "formal_target": "12 test maps x3 fixed styles x4 methods=144; six-method extension only if development supports B.",
+  "no_test_tuning": true
+}

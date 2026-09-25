@@ -1,0 +1,383 @@
+{
+  "status": "REGISTERED_BEFORE_TEST_OUTPUTS",
+  "common": {
+    "seed": 42,
+    "precision": "bf16",
+    "inner_iterations": 1,
+    "lr": 0.05,
+    "layers": [
+      10,
+      16
+    ],
+    "deterministic_algorithms": true,
+    "resolution": 512,
+    "steps": 200,
+    "attention_scale": 1.0
+  },
+  "model_path": "models/sd15",
+  "output_root": "project/results/precision_control",
+  "warmup_steps": 4,
+  "stop_on_failure": true,
+  "jobs": [
+    {
+      "run_id": "test01_vangogh_Q32_200",
+      "map_id": "test01",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test01_hokusai_Q32_200",
+      "map_id": "test01",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test01_cezanne_Q32_200",
+      "map_id": "test01",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test02_vangogh_Q32_200",
+      "map_id": "test02",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test02_hokusai_Q32_200",
+      "map_id": "test02",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test02_cezanne_Q32_200",
+      "map_id": "test02",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test03_vangogh_Q32_200",
+      "map_id": "test03",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test03_hokusai_Q32_200",
+      "map_id": "test03",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test03_cezanne_Q32_200",
+      "map_id": "test03",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test04_vangogh_Q32_200",
+      "map_id": "test04",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test04_hokusai_Q32_200",
+      "map_id": "test04",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test04_cezanne_Q32_200",
+      "map_id": "test04",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test05_vangogh_Q32_200",
+      "map_id": "test05",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test05_hokusai_Q32_200",
+      "map_id": "test05",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test05_cezanne_Q32_200",
+      "map_id": "test05",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test06_vangogh_Q32_200",
+      "map_id": "test06",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test06_hokusai_Q32_200",
+      "map_id": "test06",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test06_cezanne_Q32_200",
+      "map_id": "test06",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test07_vangogh_Q32_200",
+      "map_id": "test07",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test07_hokusai_Q32_200",
+      "map_id": "test07",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test07_cezanne_Q32_200",
+      "map_id": "test07",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test08_vangogh_Q32_200",
+      "map_id": "test08",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test08_hokusai_Q32_200",
+      "map_id": "test08",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test08_cezanne_Q32_200",
+      "map_id": "test08",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test09_vangogh_Q32_200",
+      "map_id": "test09",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test09_hokusai_Q32_200",
+      "map_id": "test09",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test09_cezanne_Q32_200",
+      "map_id": "test09",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test10_vangogh_Q32_200",
+      "map_id": "test10",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test10_hokusai_Q32_200",
+      "map_id": "test10",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test10_cezanne_Q32_200",
+      "map_id": "test10",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test11_vangogh_Q32_200",
+      "map_id": "test11",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test11_hokusai_Q32_200",
+      "map_id": "test11",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test11_cezanne_Q32_200",
+      "map_id": "test11",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test12_vangogh_Q32_200",
+      "map_id": "test12",
+      "style_id": "vangogh",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test12_hokusai_Q32_200",
+      "map_id": "test12",
+      "style_id": "hokusai",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    },
+    {
+      "run_id": "test12_cezanne_Q32_200",
+      "map_id": "test12",
+      "style_id": "cezanne",
+      "method": "Q32",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 1,
+      "prior_override": "zero_for_uniform_fp32_control"
+    }
+  ]
+}

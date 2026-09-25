@@ -1,0 +1,49 @@
+{
+  "status": "FUNCTIONAL_CHECK_NOT_FORMAL_TEST",
+  "model_path": "models/sd15",
+  "output_root": "project/results/smoke_deterministic",
+  "stop_on_failure": true,
+  "common": {
+    "resolution": 512,
+    "precision": "bf16",
+    "steps": 16,
+    "inner_iterations": 1,
+    "lr": 0.05,
+    "seed": 42,
+    "layers": [
+      10,
+      16
+    ],
+    "attention_scale": 1.0
+  },
+  "jobs": [
+    {
+      "run_id": "dev01_hokusai_B0_16",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B0",
+      "content_mode": "q",
+      "content_weight": 0.25,
+      "beta": 0,
+      "check_equivalence": true
+    },
+    {
+      "run_id": "dev01_hokusai_A1_16",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "A1",
+      "content_mode": "geometry_q",
+      "content_weight": 0.25,
+      "beta": 4
+    },
+    {
+      "run_id": "dev01_hokusai_B2_16",
+      "map_id": "dev01",
+      "style_id": "hokusai",
+      "method": "B2",
+      "content_mode": "qk",
+      "content_weight": 200,
+      "beta": 0
+    }
+  ]
+}
